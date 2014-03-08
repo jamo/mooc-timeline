@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Simple Responsive Timeline</title>
+    <link rel="stylesheet" href="timeline.css">
+    <style>
+      header {
+        padding: 2rem;
+        color: #cfd9db;
+        font-family: helvetica;
+      }
+
+      h1 {
+        color: white;
+        font-size: 3rem;
+        font-weight: 900;
+        margin-bottom: 0.5em;
+        font-family: 'open sans', sans-serif;
+        background: url(banner.jpg);
+        background-attachment: fixed;
+        background-size: 100%;
+        padding-left: 15%;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+      }
+
+      .s {
+        padding: 2rem;
+        color: rgb(50,50,50);
+        font-family: helvetica;
+        margin-top: 6rem;
+        margin-bottom: 3rem;
+        border-bottom: 1px solid lightgray;
+      }
+      .important article {
+        background-color: green;
+      }
+    </style>
+    <!--style type="text/css"></style><style type="text/css" style="display: none !important;">object:not([type]),object[classid$=":D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid$=":d27cdb6e-ae6d-11cf-96b8-444553540000"],object[codebase*="swflash.cab"],object[data*=".swf"],embed[type="application/x-shockwave-flash"],embed[src*=".swf"],object[type="application/x-shockwave-flash"],object[src*=".swf"],object[codetype="application/x-shockwave-flash"],iframe[type="application/x-shockwave-flash"],object[classid$=":166B1BCA-3F9C-11CF-8075-444553540000"],object[codebase*="sw.cab"],object[data*=".dcr"],embed[type="application/x-director"],embed[src*=".dcr"],object[type="application/x-director"],object[src*=".dcr"],object[classid$=":15B782AF-55D8-11D1-B477-006097098764"],object[codebase*="awswaxf.cab"],object[data*=".aam"],embed[type="application/x-authorware-map"],embed[src*=".aam"],object[type="application/x-authorware-map"],object[src*=".aam"],object[classid*="32C73088-76AE-40F7-AC40-81F62CB2C1DA"],object[type="application/ag-plugin"],object[type="application/x-silverlight"],object[type="application/x-silverlight-2"],object[source*=".xaml"],object[sourceelement*="xaml"],embed[type="application/ag-plugin"],embed[source*=".xaml"]{display: none !important;}</style-->
+    </head>
+  <body>
+    <h2 class="s">Ohjelmoinnin MOOC timeline</h2>
+    <ol class="timeline timeline-vertical">
+      <!--li>
+        <time>2013-04-26</time>
+        <article>
+          <h2>Some cool Event</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, architecto, quibusdam, ipsam, optio dolor voluptatibus rerum corporis delectus nisi error amet ea <strong>excepturi id</strong> asperiores accusamus nihil repudiandae impedit voluptate expedita at possimus totam vero sunt aspernatur repellat facilis necessitatibus doloribus quisquam nam enim!</p>
+          <ul>
+            <li>Here's a list.</li>
+            <li>it contains a couple of items</li>
+            <li>and looks kinda neat.</li>
+          </ul>
+          <footer>
+            <p>
+              <a href="http://1.s3.envato.com/files/74464335/index.html#">#tags</a>
+              <a href="http://1.s3.envato.com/files/74464335/index.html#">or other meta-informaton</a>
+            </p>
+          </footer>
+        </article>
+      </li-->
+      <li>
+        <span class="icon"></span>
+        <time>23.1.2014</time>
+        <article>
+          <h2>Viikon 1 Deadline</h2>
+          <p>Viikon 1 tehtävien deadline.</p>
+        </article>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <time>23.1.2014</time>
+        <article>
+          <h2>Viikon 2 Deadline</h2>
+          <p>Viikon 2 tehtävien deadline.</p>
+        </article>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <time>2.3.2014</time>
+        <article>
+          <h2>Viikon 3 Deadline</h2>
+          <p>Viikon 3 tehtävien deadline.</p>
+        </article>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <time>9.3.2014</time>
+        <article>
+          <h2>Viikon 4 Deadline</h2>
+          <p>Viikon 4 tehtävien deadline.</p>
+        </article>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <time>16.3.2014</time>
+        <article>
+          <h2>Viikon 5 Deadline</h2>
+          <p>Viikon 5 tehtävien deadline.</p>
+        </article>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <time>24.3.2014</time>
+        <article>
+          <h2>Viikon 6 Deadline</h2>
+          <p>Viikon 6 tehtävien deadline.</p>
+        </article>
+      </li>
+      <li class="important">
+        <span class="icon"></span>
+        <time>1.4.2014</time>
+        <article>
+          <h2>Opinto-oikeus hakemuksen viimeinen palautusajankohta</h2>
+          <p>
+            Hakemus tulee olla palautettuna viimeistään 1.4.2014 klo 16:15.
+          </p>
+          <footer>
+            <a href="http://mooc.cs.helsinki.fi/ohjelmointi/kurssin-suorittaminen">Lisätietoja hakemisesta</a>
+          </footer>
+        </article>
+      </li>
+      <li class="important">
+        <span class="icon"></span>
+        <time>TODO</time>
+        <article>
+          <h2>Näyttökokeisiin ilmoittautumisen takaraja</h2>
+          <p>Muistathan ilmoittautua ajoissa</p>
+        </article>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <time>6.4.2014</time>
+        <article>
+          <h2>Viikon 7 Deadline</h2>
+          <p>Viikon 7 tehtävien deadline.</p>
+        </article>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <time>13.4.2014</time>
+        <article>
+          <h2>Viikon 8 Deadline</h2>
+          <p>Viikon 8 tehtävien deadline.</p>
+        </article>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <time>20.4.2014</time>
+        <article>
+          <h2>Viikon 9 Deadline</h2>
+          <p>Viikon 9 tehtävien deadline.</p>
+        </article>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <time>27.4.2014</time>
+        <article>
+          <h2>Viikon 10 Deadline</h2>
+          <p>Viikon 10 tehtävien deadline.</p>
+        </article>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <time>4.5.2014</time>
+        <article>
+          <h2>Viikon 11 Deadline</h2>
+          <p>Viikon 11 tehtävien deadline.</p>
+        </article>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <time>11.5.2014</time>
+        <article>
+          <h2>Viikon 12 Deadline</h2>
+          <p>Viikon 12 tehtävien deadline.</p>
+        </article>
+      </li>
+      <li class="important">
+        <span class="icon"></span>
+        <time>TODO</time>
+        <article>
+          <h2>Näyttökokeita</h2>
+          <p>Olethan muistanut ilmoittautua</p>
+        </article>
+      </li>
+      <!--li>
+        <time>2013-01-06</time>
+        <article>
+          <h2>Temporibus, deleniti!</h2>
+          <p>Maxime, alias, architecto, provident dolorem assumenda voluptate quas dolores eum velit eveniet est a! Reprehenderit, exercitationem, nam repellendus expedita dolorem repudiandae rerum laudantium sed expedita, dolor facere ipsum natus adipisci voluptatum officia accusamus enim officiis sint quisquam impedit nam quasi repellendus qui saepe beatae autem culpa maxime!</p>
+          <footer>
+            <p>
+              <a href="http://1.s3.envato.com/files/74464335/index.html#">#woo</a>
+            </p>
+          </footer>
+        </article>
+      </li-->
+    </ol>
+
+
+</body></html>
