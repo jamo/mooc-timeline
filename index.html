@@ -52,6 +52,20 @@
         }
         );
 
+        // figure out which elem is most resent
+        $('time').each(function(){
+          var time = new Date($(this).attr('datetime'));
+          if (time > new Date()){
+            console.log($(this));
+            $(this).attr('id', "nextTime");
+            return false;
+          }
+        });
+
+
+        $('html, body').animate({
+          scrollTop: $("#nextTime").offset().top
+        }, 2000);
       });
     </script>
     </head>
@@ -78,7 +92,7 @@
       </li-->
       <li>
         <span class="icon"></span>
-        <time datetime="2014-01-23T23:59:59Z" >23.1.2014</time>
+        <time datetime="2014-01-23T21:59:59Z" >23.1.2014</time>
         <article>
           <h2>Viikon 1 Deadline</h2>
           <p>Viikon 1 tehtävien deadline.</p>
@@ -86,7 +100,7 @@
       </li>
       <li>
         <span class="icon"></span>
-        <time datetime="2014-01-23T23:59:59Z"> 23.1.2014</time>
+        <time datetime="2014-01-23T21:59:59Z"> 23.1.2014</time>
         <article>
           <h2>Viikon 2 Deadline</h2>
           <p>Viikon 2 tehtävien deadline.</p>
@@ -94,7 +108,7 @@
       </li>
       <li>
         <span class="icon"></span>
-        <time datetime="2014-03-02T23:59:59Z">2.3.2014</time>
+        <time datetime="2014-03-02T21:59:59Z">2.3.2014</time>
         <article>
           <h2>Viikon 3 Deadline</h2>
           <p>Viikon 3 tehtävien deadline.</p>
@@ -102,7 +116,7 @@
       </li>
       <li>
         <span class="icon"></span>
-        <time datetime="2014-03-09T23:59:59Z">9.3.2014</time>
+        <time datetime="2014-03-09T21:59:59Z">9.3.2014</time>
         <article>
           <h2>Viikon 4 Deadline</h2>
           <p>Viikon 4 tehtävien deadline.</p>
@@ -110,7 +124,7 @@
       </li>
       <li>
         <span class="icon"></span>
-        <time datetime="2014-03-16T23:59:59Z">16.3.2014</time>
+        <time datetime="2014-03-16T21:59:59Z">16.3.2014</time>
         <article>
           <h2>Viikon 5 Deadline</h2>
           <p>Viikon 5 tehtävien deadline.</p>
@@ -118,7 +132,7 @@
       </li>
       <li>
         <span class="icon"></span>
-        <time datetime="2014-24-24T23:59:59Z">24.3.2014</time>
+        <time datetime="2014-24-24T21:59:59Z">24.3.2014</time>
         <article>
           <h2>Viikon 6 Deadline</h2>
           <p>Viikon 6 tehtävien deadline.</p>
@@ -126,7 +140,7 @@
       </li>
       <li class="important">
         <span class="icon"></span>
-        <time datetime="2014-04-01T23:59:59Z">1.4.2014</time>
+        <time datetime="2014-04-01T21:59:59Z">1.4.2014</time>
         <article>
           <h2>Opinto-oikeus hakemuksen viimeinen palautusajankohta</h2>
           <p>
@@ -139,7 +153,7 @@
       </li>
       <li class="important">
         <span class="icon"></span>
-        <time datetime="2014-04-05T23:59:59Z">TODO</time>
+        <time datetime="2014-04-05T21:59:59Z">TODO</time>
         <article>
           <h2>Näyttökokeisiin ilmoittautumisen takaraja</h2>
           <p>Muistathan ilmoittautua ajoissa</p>
@@ -147,7 +161,7 @@
       </li>
       <li>
         <span class="icon"></span>
-        <time datetime="2014-04-06T23:59:59Z">6.4.2014</time>
+        <time datetime="2014-04-06T21:59:59Z">6.4.2014</time>
         <article>
           <h2>Viikon 7 Deadline</h2>
           <p>Viikon 7 tehtävien deadline.</p>
@@ -155,7 +169,7 @@
       </li>
       <li>
         <span class="icon"></span>
-        <time datetime="2014-04-13T23:59:59Z">13.4.2014</time>
+        <time datetime="2014-04-13T21:59:59Z">13.4.2014</time>
         <article>
           <h2>Viikon 8 Deadline</h2>
           <p>Viikon 8 tehtävien deadline.</p>
@@ -163,7 +177,7 @@
       </li>
       <li>
         <span class="icon"></span>
-        <time datetime="2014-04-20T23:59:59Z">20.4.2014</time>
+        <time datetime="2014-04-20T21:59:59Z">20.4.2014</time>
         <article>
           <h2>Viikon 9 Deadline</h2>
           <p>Viikon 9 tehtävien deadline.</p>
@@ -171,7 +185,7 @@
       </li>
       <li>
         <span class="icon"></span>
-        <time datetime="2014-04-27T23:59:59Z">27.4.2014</time>
+        <time datetime="2014-04-27T21:59:59Z">27.4.2014</time>
         <article>
           <h2>Viikon 10 Deadline</h2>
           <p>Viikon 10 tehtävien deadline.</p>
@@ -179,7 +193,7 @@
       </li>
       <li>
         <span class="icon"></span>
-        <time datetime="2014-05-4T23:59:59Z">4.5.2014</time>
+        <time datetime="2014-05-4T21:59:59Z">4.5.2014</time>
         <article>
           <h2>Viikon 11 Deadline</h2>
           <p>Viikon 11 tehtävien deadline.</p>
@@ -187,7 +201,7 @@
       </li>
       <li>
         <span class="icon"></span>
-        <time datetime="2014-05-11T23:59:59Z">11.5.2014</time>
+        <time datetime="2014-05-11T21:59:59Z">11.5.2014</time>
         <article>
           <h2>Viikon 12 Deadline</h2>
           <p>Viikon 12 tehtävien deadline.</p>
@@ -195,7 +209,7 @@
       </li>
       <li class="important">
         <span class="icon"></span>
-        <time datetime="2014-05-13T23:59:59Z">TODO</time>
+        <time datetime="2014-05-13T21:59:59Z">TODO</time>
         <article>
           <h2>Näyttökokeita</h2>
           <p>Olethan muistanut ilmoittautua</p>
