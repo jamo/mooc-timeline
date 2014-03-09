@@ -22,7 +22,28 @@
         padding-top: 10rem;
         padding-bottom: 10rem;
       }
+      .passedAway time {
+        color: white;
+        background: #9ea2a9;  /*5f8ae8*/
+      }
 
+
+
+      @media (min-width: 60em) {
+        .timeline-vertical time {
+          margin-left: 8rem;
+          top: -.5rem;
+        }
+        .passedAway time:after {
+          border-right-color: #9ea2a9;
+        }
+      }
+
+      @media (min-width: 60em){
+        .timeline-vertical >  li:nth-child(2n).passedAway time:after {
+          border-left-color: #9ea2a9;
+        }
+      }
       .s {
         padding: 2rem;
         color: rgb(50,50,50);
@@ -33,7 +54,7 @@
       }
       .passedAway > article {
         background: url(greynoise.jpg) !important;
-        color: #727272;
+        color: #828282;
       }
       /*.extra article {
         background: url(pinknoise.jpg);
