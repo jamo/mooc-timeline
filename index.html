@@ -36,10 +36,12 @@
       }
 
       .normal article {
-        background: url(yellownoise.jpg);
+        background: url(greynoise.jpg);
       }
       .important article {
         background: url(bluenoise.jpg);
+        background: url(noise.png);
+
       }
     </style>
     <!--style type="text/css"></style><style type="text/css" style="display: none !important;">object:not([type]),object[classid$=":D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid$=":d27cdb6e-ae6d-11cf-96b8-444553540000"],object[codebase*="swflash.cab"],object[data*=".swf"],embed[type="application/x-shockwave-flash"],embed[src*=".swf"],object[type="application/x-shockwave-flash"],object[src*=".swf"],object[codetype="application/x-shockwave-flash"],iframe[type="application/x-shockwave-flash"],object[classid$=":166B1BCA-3F9C-11CF-8075-444553540000"],object[codebase*="sw.cab"],object[data*=".dcr"],embed[type="application/x-director"],embed[src*=".dcr"],object[type="application/x-director"],object[src*=".dcr"],object[classid$=":15B782AF-55D8-11D1-B477-006097098764"],object[codebase*="awswaxf.cab"],object[data*=".aam"],embed[type="application/x-authorware-map"],embed[src*=".aam"],object[type="application/x-authorware-map"],object[src*=".aam"],object[classid*="32C73088-76AE-40F7-AC40-81F62CB2C1DA"],object[type="application/ag-plugin"],object[type="application/x-silverlight"],object[type="application/x-silverlight-2"],object[source*=".xaml"],object[sourceelement*="xaml"],embed[type="application/ag-plugin"],embed[source*=".xaml"]{display: none !important;}</style-->
@@ -51,19 +53,17 @@
         jQuery.timeago.settings.allowFuture = true;
         $('time').timeago();
 
-        $('time').each(
+        /*$('time').each(
           function(i, elm){
             var text = $(this).text();
             var time = $(this).attr('title');
             $(this).text( text + " - " + time);
-        }
-        );
+        });*/
 
         // figure out which elem is most resent
         $('time').each(function(){
           var time = new Date($(this).attr('datetime'));
           if (time > new Date()){
-            console.log($(this));
             $(this).attr('id', "nextTime");
             return false;
           }
@@ -72,12 +72,12 @@
 
         $('html, body').animate({
           scrollTop: $("#nextTime").offset().top
-        }, 2000);
+        }, 200);
       });
     </script>
     </head>
   <body>
-    <h2 class="s">Ohjelmoinnin MOOC timeline</h2>
+    <h2 class="s">Ohjelmoinnin MOOC timeline ---  REMEMBER; THIS IS A DRAFT!</h2>
     <ol class="timeline timeline-vertical">
       <!--li>
         <time>2013-04-26</time>
@@ -141,7 +141,10 @@
         <span class="icon"></span>
         <time datetime="2014-03-15T21:59:59Z">15.3.2014</time>
         <article>
-          <h2>Muista postittaa opinto-oikeus</h2>
+          <h2>Muista postittaa opinto-oikeus hakemus</h2>
+          <p>
+            Mikäli siis olet hakemassa opinto-oikeutta MOOC-kurssin kautta.
+          </p>
           <p>
             Hakemus tulee olla palautettuna viimeistään 1.4.2014 klo 16:15.
             Mikäli postitat hakemuksen, muista postittaa hakemus hyvissä ajoin!
@@ -161,22 +164,17 @@
       </li>
       <li class="important">
         <span class="icon"></span>
-        <time datetime="2014-04-01T21:59:59Z">1.4.2014</time>
+        <time datetime="2014-04-05T21:59:59Z">TODO</time>
         <article>
-          <h2>Opinto-oikeus hakemuksen viimeinen palautusajankohta</h2>
-          <p>
-            Hakemus tulee olla palautettuna viimeistään 1.4.2014 klo 16:15.
-          </p>
-          <footer>
-            <a href="http://mooc.cs.helsinki.fi/ohjelmointi/kurssin-suorittaminen">Lisätietoja hakemisesta</a>
-          </footer>
+          <h2>Näyttökokeisiin ilmoittautuminen loppuu</h2>
+          <p>Muistathan ilmoittautua ajoissa</p>
         </article>
       </li>
       <li class="important">
         <span class="icon"></span>
         <time datetime="2014-04-05T21:59:59Z">TODO</time>
         <article>
-          <h2>Näyttökokeisiin ilmoittautumisen takaraja</h2>
+          <h2>Normikokeisiin ilmoittautuminen loppuu </h2>
           <p>Muistathan ilmoittautua ajoissa</p>
         </article>
       </li>
@@ -194,6 +192,27 @@
         <article>
           <h2>Viikon 8 Deadline</h2>
           <p>Viikon 8 tehtävien deadline.</p>
+        </article>
+      </li>
+      <li class="important">
+        <span class="icon"></span>
+        <time datetime="2014-04-10T21:59:59Z">TODO: </time>
+        <article>
+          <h2>Normikokeeseen ilmoittautuminen alkaa</h2>
+          <p>TODO lisää ohjeet</p>
+        </article>
+      </li>
+      <li class="important">
+        <span class="icon"></span>
+        <time datetime="2014-04-10T21:59:59Z">TODO: 10.4.2014</time>
+        <article>
+          <h2>Opinto-oikeus hakemuksen viimeinen palautusajankohta</h2>
+          <p>
+            Hakemus tulee olla palautettuna viimeistään 1.4.2014 klo 16:15.
+          </p>
+          <footer>
+            <a href="http://mooc.cs.helsinki.fi/ohjelmointi/kurssin-suorittaminen">Lisätietoja hakemisesta</a>
+          </footer>
         </article>
       </li>
       <li class="normal">
