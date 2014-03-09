@@ -31,16 +31,18 @@
         margin-bottom: 3rem;
         border-bottom: 1px solid lightgray;
       }
-      .extra article {
-        background: url(pinknoise.jpg);
+      .passedAway > article {
+        background: url(noise.png) !important;
       }
+      /*.extra article {
+        background: url(pinknoise.jpg);
+      }*/
 
       .normal article {
         background: url(greynoise.jpg);
       }
       .important article {
-        background: url(bluenoise.jpg);
-        background: url(noise.png);
+        background: url(yellownoise.jpg);
 
       }
     </style>
@@ -69,6 +71,12 @@
           }
         });
 
+        $('time').each(function(){
+          var time = new Date($(this).attr('datetime'));
+          if (time < new Date()){
+            $(this).parent().addClass("passedAway");
+          }
+        });
 
         $('html, body').animate({
           scrollTop: $("#nextTime").offset().top
