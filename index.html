@@ -44,6 +44,13 @@
         jQuery.timeago.settings.allowFuture = true;
         $('time').timeago();
 
+        $('time').each(
+          function(i, elm){
+            var text = $(this).text();
+            var time = $(this).attr('title');
+            $(this).text( text + " - " + time);
+        }
+        );
 
       });
     </script>
