@@ -103,7 +103,7 @@
         $('time').each(function(){
           var time = $(this).attr('title');
           var txt = $(this).next().children().first().text();
-          $(this).next().children().first().text(txt + " - " + time);
+          $(this).next().children().first().html(txt +  " <small>- " + time + "</small>");
 
         });
 
