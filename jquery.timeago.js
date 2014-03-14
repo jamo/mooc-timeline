@@ -94,8 +94,6 @@
           $l = this.settings.strings;
         }
       }
-      
-	  console.log($l);
 	  
       var prefix = $l.prefix;
       var suffix = $l.suffix;
