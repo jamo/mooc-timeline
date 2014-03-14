@@ -44,22 +44,38 @@
       localeTitle: false,
       cutoff: 0,
       strings: {
-        prefixAgo: null,
-        prefixFromNow: null,
-        suffixAgo: "ago",
-        suffixFromNow: "from now",
-        inPast: 'any moment now',
-        seconds: "less than a minute",
-        minute: "about a minute",
-        minutes: "%d minutes",
-        hour: "about an hour",
-        hours: "about %d hours",
-        day: "a day",
-        days: "%d days",
-        month: "about a month",
-        months: "%d months",
-        year: "about a year",
-        years: "%d years",
+        prefix: null,
+        suffix: "päästä",
+        inPast: 'ihan kohta',
+        seconds: "hetken",
+        minute: "minuutin",
+        minutes: "%d minuutin",
+        hour: "tunnin",
+        hours: "%d tunnin",
+        day: "päivän",
+        days: "%d päivän",
+        month: "kuukauden",
+        months: "%d kuukauden",
+        year: "vuoden",
+        years: "%d vuoden",
+        wordSeparator: " ",
+        numbers: []
+      },
+      stringsAgo: {
+        prefix: null,
+        suffix: "sitten",
+        inPast: 'ihan kohta',
+        seconds: "vähän aikaa",
+        minute: "minuutti",
+        minutes: "%d minuuttia",
+        hour: "tunti",
+        hours: "%d tuntia",
+        day: "päivä",
+        days: "%d päivää",
+        month: "kuukausi",
+        months: "%d kuukautta",
+        year: "vuosi",
+        years: "%d vuotta",
         wordSeparator: " ",
         numbers: []
       }
@@ -69,17 +85,21 @@
       if(!this.settings.allowPast && ! this.settings.allowFuture) {
           throw 'timeago allowPast and allowFuture settings can not both be set to false.';
       }
-
-      var $l = this.settings.strings;
-      var prefix = $l.prefixAgo;
-      var suffix = $l.suffixAgo;
+		
+	  
+      var $l = this.settings.stringsAgo;
+      
       if (this.settings.allowFuture) {
         if (distanceMillis < 0) {
-          prefix = $l.prefixFromNow;
-          suffix = $l.suffixFromNow;
+          $l = this.settings.strings;
         }
       }
-
+      
+	  console.log($l);
+	  
+      var prefix = $l.prefix;
+      var suffix = $l.suffix;
+      
       if(!this.settings.allowPast && distanceMillis >= 0) {
         return this.settings.strings.inPast;
       }
@@ -107,7 +127,7 @@
         days < 365 && substitute($l.months, Math.round(days / 30)) ||
         years < 1.5 && substitute($l.year, 1) ||
         substitute($l.years, Math.round(years));
-
+	  
       var separator = $l.wordSeparator || "";
       if ($l.wordSeparator === undefined) { separator = " "; }
       return $.trim([prefix, words, suffix].join(separator));
