@@ -127,7 +127,7 @@
 
       var separator = $l.wordSeparator || "";
       if ($l.wordSeparator === undefined) { separator = " "; }
-      return distanceMillis < 0 ? $.trim([prefix, wordsAgo, suffix].join(separator)) : $.trim([prefix, words, suffix].join(separator));
+      return $.trim([prefix, words, suffix].join(separator));
     },
 
     parse: function(iso8601) {
