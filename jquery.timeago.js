@@ -44,22 +44,38 @@
       localeTitle: false,
       cutoff: 0,
       strings: {
-        prefixAgo: null,
-        prefixFromNow: null,
-        suffixAgo: "ago",
-        suffixFromNow: "from now",
-        inPast: 'any moment now',
-        seconds: "less than a minute",
-        minute: "about a minute",
-        minutes: "%d minutes",
-        hour: "about an hour",
-        hours: "about %d hours",
-        day: "a day",
-        days: "%d days",
-        month: "about a month",
-        months: "%d months",
-        year: "about a year",
-        years: "%d years",
+        prefix: null,
+        suffix: "päästä",
+        inPast: 'ihan kohta',
+        seconds: "hetken",
+        minute: "minuutin",
+        minutes: "%d minuutin",
+        hour: "tunnin",
+        hours: "%d tunnin",
+        day: "päivän",
+        days: "%d päivän",
+        month: "kuukauden",
+        months: "%d kuukauden",
+        year: "vuoden",
+        years: "%d vuoden",
+        wordSeparator: " ",
+        numbers: []
+      },
+      stringsAgo: {
+        prefix: null,
+        suffix: "sitten",
+        inPast: 'ihan kohta',
+        secondsAgo: "vähän aikaa",
+        minuteAgo: "minuutti",
+        minutesAgo: "%d minuuttia",
+        hourAgo: "tunti",
+        hoursAgo: "%d tuntia",
+        dayAgo: "päivä",
+        daysAgo: "%d päivää",
+        monthAgo: "kuukausi",
+        monthsAgo: "%d kuukautta",
+        yearAgo: "vuosi",
+        yearsAgo: "%d vuotta",
         wordSeparator: " ",
         numbers: []
       }
@@ -71,15 +87,16 @@
       }
 
       var $l = this.settings.strings;
-      var prefix = $l.prefixAgo;
-      var suffix = $l.suffixAgo;
+      
       if (this.settings.allowFuture) {
         if (distanceMillis < 0) {
-          prefix = $l.prefixFromNow;
-          suffix = $l.suffixFromNow;
+          $l = this.settings.stringsAgo;
         }
       }
-
+      
+      var prefix = $l.prefix;
+      var suffix = $l.suffix;
+      
       if(!this.settings.allowPast && distanceMillis >= 0) {
         return this.settings.strings.inPast;
       }
@@ -110,7 +127,7 @@
 
       var separator = $l.wordSeparator || "";
       if ($l.wordSeparator === undefined) { separator = " "; }
-      return $.trim([prefix, words, suffix].join(separator));
+      return distanceMillis < 0 ? $.trim([prefix, wordsAgo, suffix].join(separator)) : $.trim([prefix, words, suffix].join(separator));
     },
 
     parse: function(iso8601) {
